@@ -1,0 +1,1 @@
+In order to run the provided end solution, you have to perform the steps described in the Exercise 2 of this Hands-on Lab.
