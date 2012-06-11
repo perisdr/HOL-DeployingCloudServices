@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>1.6</ProductVersion>
-    <ProjectGuid>{ce838379-ac2c-4dd8-9049-f9ba9f9e2e68}</ProjectGuid>
+    <ProductVersion>1.7</ProductVersion>
+    <ProjectGuid>{f5e3b5d1-7130-4cb3-b7b7-106683ac7951}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyTodo</RootNamespace>
     <AssemblyName>MyTodo</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>MyTodo</Name>
+    <UseIISExpressByDefault>False</UseIISExpressByDefault>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,16 +39,17 @@
   <ItemGroup>
     <ProjectReference Include="..\MyTodo.WebUx\MyTodo.WebUx.csproj">
       <Name>MyTodo.WebUx</Name>
-      <Project>{7810d4a0-1933-48c3-9663-e5cbc77c80f6}</Project>
+      <Project>{ced5ca04-1ef1-44ca-8288-4b1493a090ec}</Project>
       <Private>True</Private>
       <RoleType>Web</RoleType>
       <RoleName>MyTodo.WebUx</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\1.6\</CloudExtensionsDir>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\1.7\</CloudExtensionsDir>
   </PropertyGroup>
   <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
 </Project>

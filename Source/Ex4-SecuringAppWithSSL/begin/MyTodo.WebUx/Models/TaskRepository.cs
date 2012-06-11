@@ -31,7 +31,7 @@ namespace MyTodo.WebUx.Models
             var list = new TaskList { Name = name, IsPublic = publicList };
             context.AddObject(TaskDataContext.TaskListTable, list.ToRow());
             context.SaveChanges();
-           
+
             return list;
         }
 

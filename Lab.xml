@@ -10,13 +10,13 @@
     <Email></Email>
     <Name>wwegner</Name>
   </Author>
-  <Description>In this hands-on lab, you will learn how to deploy your first application in Windows Azure. The lab walks through the process using a simple application named myTODO, which is a simple list creation and management application built using ASP.NET MVC. The lab shows the steps required for provisioning the required components in the Windows Azure Developer Portal, uploading the service package, and configuring the service. You will see how you can test your application in a staging environment and then promote it to production once you are satisfied that it is operating according to your expectations.</Description>
+  <Description>In this hands-on lab you will learn how to deploy your Cloud Services in Windows Azure. The lab walks through the process using a simple application named myTODO, which is a simple list creation and management application built using ASP.NET MVC. The lab shows the steps required for provisioning the required components in the Windows Azure Management Portal, uploading the service package, and configuring the service. You will see how you can test your application in a staging environment and then promote it to production once you are satisfied that it is operating according to your expectations.</Description>
   <Document ConversionType="Html">.\HOL.md</Document>    
-  <Title>Deploying Applications in Windows Azure</Title>
-  <Version>3.0.0</Version>
+  <Title>Deploying Cloud Services in Windows Azure</Title>
+  <Version>3.1.0</Version>
   <Source>.\source</Source>
   <DependencyChecker>.\source\Setup\Dependencies.depi</DependencyChecker>
   <CustomProperties>    
 	<Property Name="GitHubRepository" Value="https://github.com/WindowsAzure-TrainingKit/HOL-DeployingCloudServices" />
   </CustomProperties>
-</Lab>
+</Lab> 

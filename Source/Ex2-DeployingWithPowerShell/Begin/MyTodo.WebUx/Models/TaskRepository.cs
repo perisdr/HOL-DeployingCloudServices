@@ -31,7 +31,7 @@ namespace MyTodo.WebUx.Models
             var list = new TaskList { Name = name, IsPublic = publicList };
             context.AddObject(TaskDataContext.TaskListTable, list.ToRow());
             context.SaveChanges();
-           
+
             return list;
         }
 
@@ -182,7 +182,7 @@ namespace MyTodo.WebUx.Models
             CloudBlobClient blobStorage = blobAccount.CreateCloudBlobClient();
             blobStorage.RetryPolicy = RetryPolicies.Retry(1, TimeSpan.FromMilliseconds(100));
 
-            CloudBlobContainer container = blobStorage.GetContainerReference(containerName.ToLowerInvariant());
+            CloudBlobContainer container = blobStorage.GetContainerReference(containerName.ToUpperInvariant());
             container.CreateIfNotExist();
             var permissions = container.GetPermissions();
             permissions.PublicAccess = BlobContainerPublicAccessType.Container;

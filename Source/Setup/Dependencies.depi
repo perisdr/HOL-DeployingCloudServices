@@ -1,26 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DependencyCheckerConfiguration version="2.0">
-	<title>Deploying Applications in Windows Azure</title>
+	<title>Deploying Cloud Services in Windows Azure</title>
 	<dependencies>
-		<dependency 
+		<dependency
 			hint="WindowsAzureToolsVS2010" 
-			name="Windows Azure Tools for Microsoft Visual Studio 2010 1.6 or higher" 
-			helpLink="http://www.microsoft.com/web/gallery/install.aspx?appid=WindowsAzureToolsVS2010" 
-			disableSkip="false"
+			name="Windows Azure Tools for Microsoft Visual Studio 2010 (Latest)" 
+			helpLink="http://go.microsoft.com/fwlink/?LinkID=231172"
 			type="WebPI" />
+		<dependency  
+			hint="Microsoft Visual Studio 2010.*;10.0.30319"  
+			name="Microsoft Visual Studio 2010 SP1"  
+			description="Microsoft Visual Studio 2010" 
+			helpLink="wpi://vwd_rtw/"  
+			type="Uninstall" />
 		<dependency 
-			hint="Tracing" 
-			name="IIS: Tracing" 
-			helpLink="http://www.iis.net/ConfigReference/system.webServer/tracing" 
-			disableSkip="false"
-			type="WebPI" />			
+			hint="ASP.NET MVC 4.*" 
+			name="Microsoft ASP.NET MVC 4" 
+			description="ASP.NET MVC 4 is a framework for building scalable, standards-based web applications using well-established design patterns and the power of ASP.NET and the .NET Framework." 
+			helpLink="http://www.asp.net/mvc/mvc4" 
+			type="Uninstall" />		
+		<dependency
+			 hint="Windows Azure PowerShell - June 2012;0.6.0"
+			 name="Windows Azure PowerShell"
+			 description="Windows Azure PowerShell is a powerful scripting environment to control and automate the deployment and management of your workloads in Windows Azure."
+			 helpLink="http://msdn.microsoft.com/en-us/library/windowsazure/jj156055"
+			 disableSkip="false"
+			 type="Uninstall" />
 	</dependencies>
-  <setupCommands>
-    <setup 
-		command="setup.cmd" 
-		name="Setup Script" 
-		description="Executing setup scripts..." />
-  </setupCommands>	
 </DependencyCheckerConfiguration>
 
     
