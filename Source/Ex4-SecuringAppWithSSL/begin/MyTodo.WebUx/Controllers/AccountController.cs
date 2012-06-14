@@ -38,7 +38,7 @@ namespace MyTodo.WebUx.Controllers
 
         public ActionResult LogOn()
         {
-            return View();
+            return this.View();
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
@@ -48,17 +48,17 @@ namespace MyTodo.WebUx.Controllers
         {
             if (!this.ValidateLogOn(userName, password))
             {
-                return View();
+                return this.View();
             }
 
             this.FormsAuth.SignIn(userName, rememberMe);
             if (!string.IsNullOrEmpty(returnUrl))
             {
-                return Redirect(returnUrl);
+                return this.Redirect(returnUrl);
             }
             else
             {
-                return RedirectToAction("Index", "Task");
+                return this.RedirectToAction("Index", "Task");
             }
         }
 
@@ -66,14 +66,14 @@ namespace MyTodo.WebUx.Controllers
         {
             this.FormsAuth.SignOut();
 
-            return RedirectToAction("Index", "Task");
+            return this.RedirectToAction("Index", "Task");
         }
 
         public ActionResult Register()
         {
             this.ViewData["PasswordLength"] = this.MembershipService.MinPasswordLength;
 
-            return View();
+            return this.View();
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
@@ -102,7 +102,7 @@ namespace MyTodo.WebUx.Controllers
                         // Provision the Public Lists
                         this.CreateInitialLists();
 
-                        return RedirectToAction("Index", "Task");
+                        return this.RedirectToAction("Index", "Task");
                     }
                     else
                     {
@@ -116,7 +116,7 @@ namespace MyTodo.WebUx.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            return View();
+            return this.View();
         }
 
         [Authorize]
@@ -124,7 +124,7 @@ namespace MyTodo.WebUx.Controllers
         {
             this.ViewData["PasswordLength"] = this.MembershipService.MinPasswordLength;
 
-            return View();
+            return this.View();
         }
 
         [AcceptVerbs(HttpVerbs.Post), Authorize]
@@ -136,7 +136,7 @@ namespace MyTodo.WebUx.Controllers
 
             if (!this.ValidateChangePassword(currentPassword, newPassword, confirmPassword))
             {
-                return View();
+                return this.View();
             }
 
             try
@@ -155,13 +155,13 @@ namespace MyTodo.WebUx.Controllers
             catch
             {
                 ModelState.AddModelError("_FORM", "The current password is incorrect or the new password is invalid.");
-                return View();
+                return this.View();
             }
         }
 
         public ActionResult ProfileUpdateSuccess()
         {
-            return View();
+            return this.View();
         }
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
