@@ -41,10 +41,10 @@ namespace MyTodo.WebUx.Controllers
                 ViewData.Add("ListId", list.ListId);
                 ViewData.Add("ListName", list.Name);
                 ViewData.Add("AuthenticatedUser", User.IsInRole("Owner"));
-                return View("Tasks");
+                return this.View("Tasks");
             }
 
-            return RedirectToAction("Index");
+            return this.RedirectToAction("Index");
         }
 
         public ActionResult About()
